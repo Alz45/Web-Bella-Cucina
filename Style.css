@@ -12,11 +12,29 @@
     --border: #DED4C8;
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 /* Page background and text */
 body {
+    margin: 0;
     background-color: var(--background);
     color: var(--text);
     font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+}
+
+input,
+select,
+textarea {
+    max-width: 100%;
 }
 
 /* Navigation bar */
@@ -491,6 +509,41 @@ footer p {
 
     .portfolio-home > .section {
         padding: 20px;
+    }
+
+    .portfolio-nav.menu-ready {
+        gap: 8px;
+        padding: 12px 15px;
+    }
+
+    .portfolio-nav.menu-ready .menu-brand {
+        position: static;
+        margin-right: auto;
+        transform: none;
+        font-size: clamp(1.1rem, 4vw, 1.5rem);
+    }
+
+    .portfolio-nav.menu-ready .menu-book-now {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+    }
+
+    .portfolio-nav.menu-ready .menu-toggle {
+        min-width: 44px;
+        min-height: 44px;
+        padding: 8px;
+    }
+
+    .home-banner {
+        height: clamp(120px, 42vw, 170px);
+        margin: 16px auto;
+    }
+
+    .cookie-notice {
+        right: 12px;
+        bottom: 12px;
+        left: 12px;
+        max-width: none;
     }
 }
 
