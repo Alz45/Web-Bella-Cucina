@@ -725,27 +725,6 @@ footer p {
     line-height: 1.6;
 }
 
-.problem-solving-page > .hero {
-    padding: 56px 20px;
-    text-align: center;
-}
-
-.problem-solving-page > .hero h1 {
-    margin: 0 0 12px;
-    color: var(--gold-light);
-    font-size: clamp(2rem, 5vw, 2.75rem);
-}
-
-.problem-solving-page > .hero p {
-    max-width: 750px;
-    margin: 0 auto;
-    color: var(--white);
-}
-
-.problem-solving-page > .hero .hero-content {
-    margin: 0 auto;
-}
-
 .problem-solving-page > .section {
     width: min(900px, calc(100% - 40px));
     box-sizing: border-box;
@@ -781,10 +760,6 @@ footer p {
 }
 
 @media (max-width: 600px) {
-    .problem-solving-page > .hero {
-        padding: 42px 18px;
-    }
-
     .problem-solving-page > .section {
         width: calc(100% - 30px);
         margin: 24px auto;
