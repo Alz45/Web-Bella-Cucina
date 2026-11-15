@@ -724,8 +724,9 @@ footer p {
 }
 
 /* Booking form on the problem-solving page */
-.problem-solving-page > header {
-    box-shadow: none;
+.problem-solving-page {
+    margin: 0;
+    line-height: 1.6;
 }
 
 .problem-solving-page > .hero .hero-content {
