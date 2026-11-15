@@ -252,6 +252,28 @@
 
     </section>
 
+    <section id="restaurant-contact" class="section" aria-labelledby="restaurant-contact-heading">
+        <h2 id="restaurant-contact-heading">Contact the Restaurant</h2>
+        <div class="contact-grid">
+            <div>
+                <h3>Address</h3>
+                <p>123 High Street, Manchester, UK</p>
+            </div>
+            <div>
+                <h3>Telephone</h3>
+                <p><a href="tel:+441611234567">0161 123 4567</a></p>
+            </div>
+            <div>
+                <h3>Email</h3>
+                <p><a href="mailto:bella.cucina@manchester.ac.uk">bella.cucina@manchester.ac.uk</a></p>
+            </div>
+            <div>
+                <h3>Opening Hours</h3>
+                <p>Monday–Sunday: 12:00–22:00</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Social Media -->
     <section class="section social-section">
         <h2>Connect With Us</h2>
@@ -383,7 +405,7 @@
 
             restaurantFormStatus.textContent = "Your email application should open with the request details.";
             restaurantFormStatus.hidden = false;
-            window.location.href = `mailto:alice@bellacucina.ac.com?subject=${encodeURIComponent(formData.get("requestType"))}&body=${encodeURIComponent(emailBody)}`;
+            window.location.href = `mailto:bella.cucina@manchester.ac.uk?subject=${encodeURIComponent(formData.get("requestType"))}&body=${encodeURIComponent(emailBody)}`;
         });
     </script>
 </body>
