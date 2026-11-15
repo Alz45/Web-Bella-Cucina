@@ -724,6 +724,10 @@ footer p {
 }
 
 /* Booking form on the problem-solving page */
+.problem-solving-page > header {
+    box-shadow: none;
+}
+
 .problem-solving-page > .hero .hero-content {
     max-width: 760px;
     margin: 0 auto;
