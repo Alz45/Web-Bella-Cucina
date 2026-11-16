@@ -482,6 +482,7 @@ footer {
     background: var(--navy);
     color: var(--white);
     border-top: 4px solid var(--gold);
+    text-align: center;
 }
 
 footer p {
