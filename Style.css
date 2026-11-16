@@ -203,11 +203,18 @@ nav ul li a:hover,
 
 .home-banner {
     position: relative;
-    width: calc(100% - 40px);
-    max-width: 1000px;
-    height: 170px;
-    margin: 24px auto;
+    width: min(1200px, calc(100% - 64px));
+    height: clamp(220px, 28vw, 340px);
+    margin: 32px auto;
+    overflow: hidden;
+    border-radius: 14px;
     box-shadow: 0 6px 24px rgba(75, 52, 39, 0.15);
+}
+
+@media (max-width: 960px) {
+    .home-banner {
+        width: calc(100% - 48px);
+    }
 }
 
 .home-banner-image {
@@ -261,21 +268,87 @@ nav ul li a:hover,
 }
 
 /* Portfolio home content cards */
-.portfolio-home > .hero,
-.portfolio-home > .section {
-    width: min(900px, calc(100% - 40px));
+.home-content {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    width: min(1200px, calc(100% - 64px));
     box-sizing: border-box;
-    margin: 24px auto;
+    margin: 0 auto 40px;
 }
 
-.portfolio-home > .hero {
-    padding: 64px 24px;
+.home-content > .hero,
+.home-content > .section {
+    width: auto;
+    margin: 0;
+}
+
+.home-content > .hero,
+.home-content > #about {
+    grid-column: 1 / -1;
+}
+
+.home-content > .hero {
+    padding: clamp(56px, 8vw, 96px) 32px;
     border-radius: 12px;
     text-align: center;
 }
 
-.portfolio-home > .section {
-    padding: 28px;
+.home-content .hero-content {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.home-content .hero h1 {
+    font-size: clamp(2.25rem, 4vw, 3.5rem);
+}
+
+.home-content .hero p {
+    max-width: 680px;
+    margin: 18px auto 24px;
+}
+
+.home-content > .section {
+    padding: clamp(24px, 3vw, 36px);
+}
+
+.home-content > .section h2 {
+    margin-top: 0;
+}
+
+@media (max-width: 960px) {
+    .home-content {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: min(900px, calc(100% - 48px));
+    }
+}
+
+@media (max-width: 600px) {
+    .home-content {
+        grid-template-columns: 1fr;
+        width: calc(100% - 30px);
+        gap: 18px;
+        margin-bottom: 24px;
+    }
+
+    .home-content > .hero,
+    .home-content > #about {
+        grid-column: auto;
+    }
+
+    .home-content > .hero {
+        padding: 48px 20px;
+    }
+
+    .home-content > .section {
+        padding: 20px;
+    }
+
+    .home-banner {
+        width: calc(100% - 30px);
+        height: clamp(120px, 42vw, 170px);
+        margin: 16px auto;
+    }
 }
 
 /* Buttons */
@@ -498,20 +571,6 @@ footer p {
 }
 
 @media (max-width: 600px) {
-    .portfolio-home > .hero,
-    .portfolio-home > .section {
-        width: calc(100% - 30px);
-        margin: 24px auto;
-    }
-
-    .portfolio-home > .hero {
-        padding: 48px 20px;
-    }
-
-    .portfolio-home > .section {
-        padding: 20px;
-    }
-
     .portfolio-nav.menu-ready {
         gap: 8px;
         padding: 12px 15px;
@@ -535,11 +594,6 @@ footer p {
         padding: 8px;
     }
 
-    .home-banner {
-        height: clamp(120px, 42vw, 170px);
-        margin: 16px auto;
-    }
-
     .cookie-notice {
         right: 12px;
         bottom: 12px;
@@ -550,9 +604,9 @@ footer p {
 
 /* Skills page */
 .skills-page {
-    max-width: 900px;
+    width: min(1100px, calc(100% - 64px));
+    max-width: none;
     margin: 40px auto;
-    padding: 0 20px;
 }
 
 .skills-page h1,
@@ -625,6 +679,7 @@ footer p {
 
 @media (max-width: 600px) {
     .skills-page {
+        width: calc(100% - 30px);
         margin: 24px auto;
     }
 
@@ -643,11 +698,12 @@ footer p {
 }
 
 .contact-page .hero {
-    padding: 56px 20px;
+    padding: clamp(42px, 6vw, 72px) 20px;
     text-align: center;
 }
 
 .contact-page .hero-content {
+    max-width: 1100px;
     margin: 0 auto;
 }
 
@@ -663,7 +719,7 @@ footer p {
 }
 
 .contact-content {
-    width: min(900px, calc(100% - 40px));
+    width: min(1100px, calc(100% - 64px));
     margin: 40px auto;
     flex: 1;
 }
@@ -780,16 +836,35 @@ footer p {
 }
 
 .problem-solving-page > .section {
-    width: min(900px, calc(100% - 40px));
+    width: min(1100px, calc(100% - 64px));
     box-sizing: border-box;
-    margin: 40px auto;
-    padding: 28px;
+    margin: clamp(24px, 4vw, 40px) auto;
+    padding: clamp(22px, 3vw, 36px);
 }
 
 .booking-section {
+    width: min(900px, 100%);
     max-width: 900px;
     margin: 28px auto;
     padding: 28px;
+}
+
+.problem-solving-page .menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+.problem-solving-page .menu-items li {
+    min-width: 0;
+}
+
+.problem-solving-page .menu-items img {
+    width: 160px;
+    height: 194px;
+    object-fit: cover;
 }
 
 .booking-section .form-group label {
@@ -852,8 +927,8 @@ footer p {
 }
 
 .showcase-container {
-    width: min(900px, calc(100% - 40px));
-    margin: 40px auto;
+    width: min(1100px, calc(100% - 64px));
+    margin: clamp(24px, 4vw, 40px) auto;
 }
 
 .showcase-intro,
@@ -917,5 +992,63 @@ footer p {
     .showcase-intro,
     .showcase-project {
         padding: 20px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .portfolio-nav.menu-ready {
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+
+    .portfolio-nav.menu-ready .menu-brand {
+        position: static;
+        transform: none;
+        margin-right: auto;
+    }
+
+    .portfolio-nav.menu-ready .menu-toggle {
+        display: none;
+    }
+
+    .portfolio-nav.menu-ready ul {
+        position: static;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        width: auto;
+        gap: 8px 20px;
+        padding: 0;
+        background: transparent;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+}
+
+@media (max-width: 960px) {
+    .skills-page,
+    .contact-content,
+    .problem-solving-page > .section,
+    .showcase-container {
+        width: calc(100% - 48px);
+    }
+}
+
+@media (max-width: 600px) {
+    .skills-page,
+    .contact-content,
+    .problem-solving-page > .section,
+    .showcase-container {
+        width: calc(100% - 30px);
+    }
+
+    .problem-solving-page .menu-items {
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+        gap: 16px 10px;
+    }
+
+    .problem-solving-page .menu-items img {
+        max-width: 100%;
     }
 }
