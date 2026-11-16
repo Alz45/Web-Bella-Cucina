@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Restaurant Digital Solutions</title>
+
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body class="problem-solving-page">
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar portfolio-nav" aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="businessshowcase.html">Business Showcase</a></li>
+                <li><a href="problemsolving.html">Problem Solving</a></li>
+                <li><a href="contactdetails.html">Contact Details</a></li>
+                <li><a href="skills.html">Skills</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero showcase-hero">
+        <h1>Better Dining Through <span>Digital Innovation</span></h1>
+
+        <p>
+            Discover how digital technology can improve restaurant
+            bookings, customer communication, and the overall dining
+            experience.
+        </p>
+    </section>
+
+    <!-- Business Context -->
+    <section id="case-study" class="section">
+        <h2>Business Context</h2>
+
+        <p>
+            Bella Cucina is a local restaurant that wants to
+            modernise its digital presence and operations to remain
+            competitive and serve customers better. As its Chief Technology
+            Officer (CTO), I made sure that the website itself is designed
+            to be user-friendly, which strengthens customer engagement,
+            improves operational efficiency, and enhances the dining
+            experience.
+        </p>
+
+        <p>
+            The proposed website brings the online menu together with a
+            table-booking and enquiry form, customer feedback, and social
+            media links for communication and promotion. Its structure helps
+            visitors find information and take action in one place. This
+            prototype prepares requests in an email rather than storing them
+            in a live database.
+        </p>
+
+        <h3 id="menu" class="menu-title">MENU</h3>
+        <h3 class="menu-title">Dishes</h3>
+        <ul class="dish-list menu-items">
+            <li>
+                Margherita pizza — £9.99
+                <img
+                    src="margherita-pizza.jpg"
+                    alt="Margherita pizza topped with tomato, mozzarella, and fresh basil"
+                >
+            </li>
+            <li>
+                Spaghetti — £11.50
+                <img
+                    src="spaghetti-carbonara.jpg"
+                    alt="A plate of spaghetti garnished with herbs and cheese"
+                >
+            </li>
+            <li>
+                Lasagna — £13.00
+                <img
+                    src="lasagna.jpg"
+                    alt="A serving of layered lasagna topped with cheese and herbs"
+                >
+            </li>
+            <li>
+                Risotto — £8.99
+                <img
+                    src="risotto.jpg"
+                    alt="Risotto topped with tomatoes, cheese, and fresh basil"
+                >
+            </li>
+            <li>
+                Ravioli — £8.99
+                <img
+                    src="ravioli.webp"
+                    alt="Ravioli served with tomato sauce and fresh basil"
+                >
+            </li>
+        </ul>
+
+        <h3 class="menu-title">Desserts</h3>
+        <ul class="dessert-list menu-items">
+            <li>
+                Tiramisu - £10.00
+                <img
+                    src="tiramisu.jpg"
+                    alt="A slice of tiramisu dusted with cocoa powder"
+                >
+            </li>
+            <li>
+                Cannoli - £4.50
+                <img
+                    src="cannoli.jpg"
+                    alt="Cannoli filled with cream and topped with chopped pistachios"
+                >
+            </li>
+            <li>
+                Panna cotta - £5.65
+                <img
+                    src="panna-cotta.jpg"
+                    alt="Panna cotta served with fresh strawberries"
+                >
+            </li>
+            <li>
+                Gelato - £5.00
+                <img
+                    src="gelato.webp"
+                    alt="Pistachio gelato served with wafer rolls"
+                >
+            </li>
+            <li>
+                Sfogliatelle - £3.60
+                <img
+                    src="sfogliatelle.jpg"
+                    alt="Sfogliatelle pastries filled with cream and dusted with powdered sugar"
+                >
+            </li>
+        </ul>
+
+        <h3 class="menu-title">Drinks</h3>
+        <ul class="dish-list menu-items">
+            <li>
+                Coca-Cola - £2.00
+                <img
+                    src="coca-cola.jpg"
+                    alt="Glass of Coca-Cola with ice"
+                >
+            </li>
+            <li>
+                <span>Espresso - Cappuccino<br>- £1.50</span>
+                <img
+                    src="espresso.jpg"
+                    alt="Cup of espresso coffee"
+                >
+            </li>
+            <li>
+                Water - £2.00
+                <img
+                    src="water-glasses.jpg"
+                    alt="Two glasses of water"
+                >
+            </li>
+            <li>
+                Wine - £6.60
+                <img
+                    src="wine.jpg"
+                    alt="Bottle of champagne with a glass of wine"
+                >
+            </li>
+            <li>
+                Beer - £7.00
+                <img
+                    src="beer.jpg"
+                    alt="Three glasses of beer"
+                >
+            </li>
+        </ul>
+
+        <section id="booking" class="section booking-section" aria-labelledby="booking-heading">
+            <h2 id="booking-heading">Booking Request &amp; Customer Feedback</h2>
+            <p>Complete the form below to prepare an email for the restaurant. No account or website database is required.</p>
+
+            <form id="restaurantForm">
+                <div class="form-group">
+                    <label for="restaurant-name">Full Name *</label>
+                    <input type="text" id="restaurant-name" name="name" maxlength="100" autocomplete="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="restaurant-email">Email Address *</label>
+                    <input type="email" id="restaurant-email" name="email" maxlength="254" autocomplete="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="requestType">Type of Request *</label>
+                    <select id="requestType" name="requestType" required>
+                        <option value="">Select an option</option>
+                        <option value="Table Booking">Table Booking</option>
+                        <option value="Customer Feedback">Customer Feedback</option>
+                        <option value="General Enquiry">General Enquiry</option>
+                    </select>
+                </div>
+
+                <div id="bookingFields" hidden>
+                    <div class="form-group">
+                        <label for="booking-date">Preferred Date</label>
+                        <input type="date" id="booking-date" name="date">
+                    </div>
+                    <div class="form-group">
+                        <label for="booking-time">Preferred Time</label>
+                        <input type="time" id="booking-time" name="time">
+                    </div>
+                    <div class="form-group">
+                        <label for="guests">Number of Guests</label>
+                        <select id="guests" name="guests">
+                            <option value="1">1 guest</option>
+                            <option value="2" selected>2 guests</option>
+                            <option value="3">3 guests</option>
+                            <option value="4">4 guests</option>
+                            <option value="5">5 guests</option>
+                            <option value="6">6 guests</option>
+                            <option value="7 or more">7 or more guests</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="restaurant-message">Message or Feedback *</label>
+                    <textarea id="restaurant-message" name="message" rows="5" maxlength="2000"
+                        placeholder="Enter your booking requirements, questions, or feedback..." required></textarea>
+                </div>
+
+                <div class="privacy-check">
+                    <input type="checkbox" id="restaurant-privacy-consent" required>
+                    <label for="restaurant-privacy-consent">
+                        I have read the <a href="#privacy">privacy notice</a> and understand that my information
+                        will be included in an email prepared by this website. *
+                    </label>
+                </div>
+
+                <button type="submit" class="btn">Submit</button>
+                <div id="paymentMethodField" class="form-group">
+                    <label for="payment-method">Payment Method (required for table bookings)</label>
+                    <select id="payment-method" name="paymentMethod">
+                        <option value="">Select a payment method</option>
+                        <option value="Credit/debit card">Credit/debit card</option>
+                        <option value="PayPal">PayPal</option>
+                        <option value="Pay at the restaurant">Pay at the restaurant</option>
+                    </select>
+                </div>
+                <p id="restaurantFormStatus" class="status-message" role="status" aria-live="polite" hidden></p>
+            </form>
+        </section>
+
+    </section>
+
+    <section id="restaurant-contact" class="section" aria-labelledby="restaurant-contact-heading">
+        <h2 id="restaurant-contact-heading">Contact the Restaurant</h2>
+        <div class="contact-grid">
+            <div>
+                <h3>Address</h3>
+                <p>123 High Street, Manchester, UK</p>
+            </div>
+            <div>
+                <h3>Telephone</h3>
+                <p><a href="tel:+441611234567">0161 123 4567</a></p>
+            </div>
+            <div>
+                <h3>Email</h3>
+                <p><a href="mailto:bella.cucina@manchester.ac.uk">bella.cucina@manchester.ac.uk</a></p>
+            </div>
+            <div>
+                <h3>Opening Hours</h3>
+                <p>Monday–Sunday: 12:00–22:00</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media -->
+    <section class="section social-section">
+        <h2>Connect With Us</h2>
+
+        <p>
+            Follow our social media channels for restaurant updates,
+            menu announcements, special offers, and events.
+        </p>
+
+        <div class="social-links">
+            <a href="https://www.facebook.com/"
+               target="_blank" rel="noopener noreferrer">
+                Facebook
+            </a>
+
+            <a href="https://www.instagram.com/"
+               target="_blank" rel="noopener noreferrer">
+                Instagram
+            </a>
+
+            <a href="https://x.com/"
+               target="_blank" rel="noopener noreferrer">
+                Twitter / X
+            </a>
+        </div>
+
+    </section>
+
+    <!-- Privacy and Data Protection -->
+    <section id="privacy" class="section privacy-section">
+        <h2>Privacy, Security & Data Protection</h2>
+
+        <p>
+            Protecting customer information is an important part of
+            digital transformation.
+        </p>
+
+        <ul class="privacy-list">
+            <li>
+                <strong>Data minimisation:</strong>
+                Its a core data protection principle that allows to store and
+                process the information of customers within the business. And
+                only requires to have necessary information to handle the
+                enquiry.
+            </li>
+
+            <li>
+                <strong>Transparency:</strong>
+                It allows customers to be aware of how their
+                infomation its it used within the business before they fill
+                any form.
+            </li>
+
+            <li>
+                <strong>GDPR:</strong>
+                The business uses the GDPR policy within the business accoring
+                to the law, which make sures that the information provided its
+                accurate and protected and not missed used. It allows to
+                control and secure the customers infomation effectively.
+            </li>
+
+            <li>
+                <strong>Cookie awareness:</strong>
+                Allows costumers to gain knowledge of how the overall
+                business will use their infomation. And shows that costumers
+                can trust the information process of the business.
+            </li>
+        </ul>
+
+    </section>
+
+    <!-- Cookie Notice -->
+    <aside id="cookieNotice" class="cookie-notice" hidden>
+        <p>
+            This demonstration does not use tracking cookies.
+            If optional analytics or advertising cookies are introduced,
+            the website will need an appropriate consent mechanism.
+        </p>
+
+        <button type="button" id="closeCookieNotice" class="btn">
+            Close Notice
+        </button>
+    </aside>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 | Digital Transformation Case Study</p>
+    </footer>
+
+    <script src="problem-solving.js"></script>
+    <script src="navigation.js"></script>
+    <script>
+        const restaurantForm = document.getElementById("restaurantForm");
+        const requestType = document.getElementById("requestType");
+        const bookingFields = document.getElementById("bookingFields");
+        const paymentMethod = document.getElementById("payment-method");
+        const restaurantFormStatus = document.getElementById("restaurantFormStatus");
+
+        const updateBookingFields = () => {
+            const isTableBooking = requestType.value === "Table Booking";
+            bookingFields.hidden = !isTableBooking;
+            paymentMethod.required = isTableBooking;
+        };
+
+        requestType.addEventListener("change", updateBookingFields);
+
+        restaurantForm.addEventListener("submit", (event) => {
+            event.preventDefault();
+            if (!restaurantForm.reportValidity()) return;
+
+            const formData = new FormData(restaurantForm);
+            const emailLines = [
+                `Name: ${formData.get("name")}`,
+                `Email: ${formData.get("email")}`,
+                `Request: ${formData.get("requestType")}`
+            ];
+
+            if (formData.get("requestType") === "Table Booking") {
+                if (formData.get("date")) emailLines.push(`Date: ${formData.get("date")}`);
+                if (formData.get("time")) emailLines.push(`Time: ${formData.get("time")}`);
+                emailLines.push(`Guests: ${formData.get("guests")}`);
+                emailLines.push(`Payment method: ${formData.get("paymentMethod")}`);
+            }
+
+            emailLines.push("", "Message:", formData.get("message"));
+            const emailBody = emailLines.join("\n");
+
+            restaurantFormStatus.textContent = "Your email application should open with the request details.";
+            restaurantFormStatus.hidden = false;
+            window.location.href = `mailto:bella.cucina@manchester.ac.uk?subject=${encodeURIComponent(formData.get("requestType"))}&body=${encodeURIComponent(emailBody)}`;
+        });
+    </script>
+</body>
+</html>
