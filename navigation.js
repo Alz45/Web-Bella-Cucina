@@ -2,6 +2,7 @@ document.querySelectorAll(".portfolio-nav").forEach((nav, index) => {
     const menu = nav.querySelector("ul");
     if (!menu) return;
 
+    const desktopNav = window.matchMedia("(min-width: 1200px)");
     const menuId = `portfolio-menu-${index + 1}`;
     menu.id = menuId;
     menu.hidden = true;
@@ -27,6 +28,11 @@ document.querySelectorAll(".portfolio-nav").forEach((nav, index) => {
         );
     };
 
+    const updateMenuForViewport = () => {
+        toggle.hidden = desktopNav.matches;
+        setMenuOpen(desktopNav.matches);
+    };
+
     toggle.addEventListener("click", () => {
         setMenuOpen(menu.hidden);
     });
@@ -36,17 +42,26 @@ document.querySelectorAll(".portfolio-nav").forEach((nav, index) => {
     });
 
     menu.addEventListener("mouseout", (event) => {
-        if (!menu.contains(event.relatedTarget)) setMenuOpen(false);
+        if (!desktopNav.matches && !menu.contains(event.relatedTarget)) {
+            setMenuOpen(false);
+        }
     });
 
     nav.addEventListener("keydown", (event) => {
-        if (event.key === "Escape" && !menu.hidden) {
+        if (!desktopNav.matches && event.key === "Escape" && !menu.hidden) {
             setMenuOpen(false);
             toggle.focus();
         }
     });
 
     nav.insertBefore(toggle, menu);
+    updateMenuForViewport();
+    if (typeof desktopNav.addEventListener === "function") {
+        desktopNav.addEventListener("change", updateMenuForViewport);
+    } else {
+        desktopNav.addListener(updateMenuForViewport);
+    }
+
     if (!document.body.classList.contains("portfolio-home")) {
         const brand = document.createElement("a");
         brand.className = "menu-brand";
