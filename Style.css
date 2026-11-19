@@ -861,6 +861,11 @@ footer p {
     min-width: 0;
 }
 
+.problem-solving-page .drink-list li > span {
+    display: block;
+    min-height: 3.2em;
+}
+
 .problem-solving-page .menu-items img {
     width: 160px;
     height: 194px;
